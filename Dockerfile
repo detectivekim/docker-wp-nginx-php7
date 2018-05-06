@@ -51,7 +51,7 @@ RUN /usr/bin/pip install supervisor-stdout
 ADD ./supervisord.conf /etc/supervisord.conf
 
 # Install Wordpress
-ADD https://wordpress.org/latest.tar.gz /var/www/latest.tar.gz
+ADD https://ko.wordpress.org/wordpress-4.9.5-ko_KR.tar.gz /var/www/latest.tar.gz
 RUN cd /var/www && tar zxf latest.tar.gz && rm latest.tar.gz
 RUN rm -rf /var/www/html
 RUN mv /var/www/wordpress /var/www/html
