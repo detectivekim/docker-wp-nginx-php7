@@ -5,8 +5,8 @@ This Dockerfile will install Nginx and php-fpm7. MySQL is not included in this. 
 ### How to use it
 Clone this repo to wherever you will be hosting your Docker container
 ```
-git clone https://github.com/MansoorMajeed/docker-wp-nginx-php7
-cd docker-wp-nginx-php7
+git clone https://github.com/detectivekim/docker-wp-nginx-php7.0.git
+cd docker-wp-nginx-php7.0
 ```
 Edit the `start.sh` file and fill in 
 ```
@@ -19,17 +19,17 @@ save the file and exit
 
 Build your image
 ```
-docker build -t "mansoormajeed/docker-wp-nginx-php7" .
+docker build -t "detectivekim/docker-wp-nginx-php7.0" .
 ```
 Once the build is complete, you can start a container with it.
 This will map your host machines port 80 to the container's port 80 and you will be able to access the
 site in your host machine at `localhost` 
 ```
-sudo docker run -it -p 80:80 mansoormajeed/docker-wp-nginx-php7
+sudo docker run -it -p 80:80 detectivekim/docker-wp-nginx-php7.0
 ```
 If you want the container to run in the background, you can use
 ```
-docker run -it -p 80:80 --name wp-nginx -d mansoormajeed/docker-wp-nginx-php7
+docker run -it -p 80:80 --name wp-nginx -d detectivekim/docker-wp-nginx-php7.0
 ```
 If you are using a Linux distro, you may need to use the above command with `sudo` inorder to bind to local port 80
 
