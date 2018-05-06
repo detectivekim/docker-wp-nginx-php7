@@ -15,7 +15,7 @@ RUN apt-get -y upgrade
 RUN apt-get install php7.0-fpm php7.0-mysql php7.0-gd php7.0-cli nginx -y
 
 # Some essential tools
-RUN apt-get install curl git wget net-tools vim -y
+RUN apt-get install curl git wget net-tools vim apt-utils -y
 
 # nginx config
 # Reduce keepalive timeout to 2 seconds
@@ -45,6 +45,7 @@ RUN mkdir -p /var/log/php-fpm
 ADD ./site.conf /etc/nginx/sites-available/default
 
 RUN apt-get install python-pip -y
+RUN pip install --upgrade pip
 # Supervisor Config
 RUN /usr/bin/pip install supervisor
 RUN /usr/bin/pip install supervisor-stdout
