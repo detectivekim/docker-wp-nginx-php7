@@ -1,5 +1,4 @@
 FROM ubuntu:16.04
-MAINTAINER Mansoor A <mansoor@digitz.org>
 
 # Keep upstart from complaining
 RUN dpkg-divert --local --rename --add /sbin/initctl
